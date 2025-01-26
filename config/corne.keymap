@@ -44,7 +44,7 @@
             // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            display-name = "Lower";
+            display-name = "NUM";
             bindings = <
 &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5     &kp N6    &kp N7    &kp N8          &kp N9             &kp N0   &kp BSPC
 &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5     &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT          &trans   &trans
@@ -60,7 +60,7 @@
             // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            display-name = "Raise";
+            display-name = "SYM";
             bindings = <
 &kp ESC  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
 &trans   &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
@@ -76,6 +76,8 @@
 &trans      &trans         &trans        &trans        &trans        &trans          &none           &none             &none       &none  &none            &sys_reset
                                          &trans        &trans        &trans          &trans          &trans            &trans
             >;
+
+            label = "Adjust";
         };
 
         extra_2 { status = "reserved"; };
