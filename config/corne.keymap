@@ -36,6 +36,20 @@
             tapping-term-ms = <350>;
             flavor = "tap-preferred";
         };
+
+        TP_PGUP_HOME: TP_PGUP_HOME {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TP_PGUP_HOME";
+            #binding-cells = <0>;
+            bindings = <&kp PG_UP>, <&kp HOME>;
+        };
+
+        TP_PGDN_END: TP_PGDN_END {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TP_PGDN_END";
+            #binding-cells = <0>;
+            bindings = <&kp PG_DN>, <&kp END>;
+        };
     };
 
     combos {
@@ -98,9 +112,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3    &kp N4  &kp N5     &kp N6    &kp N7    &kp N8             &kp N9            &kp N0   &trans
-&trans  &kp F1  &kp F2  &kp F3    &kp F4  &kp F5     &kp LEFT  &kp DOWN  &kp UP             &kp RIGHT         &trans   &trans
-&trans  &kp F6  &kp F7  &kp F8    &kp F9  &kp F10    &kp F11   &kp F12   &mt PAGE_DOWN END  &mt PAGE_UP HOME  &kp INS  &trans
+&trans  &kp N1  &kp N2  &kp N3    &kp N4  &kp N5     &kp N6    &kp N7    &kp N8         &kp N9        &kp N0   &trans
+&trans  &kp F1  &kp F2  &kp F3    &kp F4  &kp F5     &kp LEFT  &kp DOWN  &kp UP         &kp RIGHT     &trans   &trans
+&trans  &kp F6  &kp F7  &kp F8    &kp F9  &kp F10    &kp F11   &kp F12   &TP_PGUP_HOME  &TP_PGDN_END  &kp INS  &trans
                         &kp LGUI  &trans  &trans     &trans    &trans    &trans
             >;
         };
